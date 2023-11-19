@@ -1,0 +1,739 @@
+/* =========== Common Css Start =========== */
+:root {
+    --primary-font: "Josefin Sans", sans-serif;
+    --secondary-font: "Roboto", sans-serif;
+    --text-color: #11161e;
+    --dark-hover-color: #151a32;
+    --light-color: #ffffff;
+    --primary-color-light: #ff6f61;
+    --primary-color-dark: #ff5645;
+    --paragraph-color: #444444;
+    --bg-color-dark: #f1f1f1;
+    --bg-color-light: #f1f3f4;
+    --dark-color: #000000;
+    --border-color:#8c8c8c;
+    --shadow-22: 0 3px 10px 0px rgba(var(--dark-color), 0.08);
+    --shadow-32: 0 0 50px 0px rgba(var(var(--dark-hover-color)), 0.1);
+    --shadow-42: 0 5px 30px 0px rgba(var(var(--text-color)), 0.08);
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+ul,
+ol,
+li,
+p,
+span {
+    margin: 0;
+    padding: 0;
+}
+a,
+a:hover {
+    text-decoration: none;
+}
+ul,
+ol {
+    list-style-type: none;
+}
+body {
+    font-family: var(--primary-font);
+}
+p {
+    font-family: var(--secondary-font);
+}
+.text-justify {
+    text-align: justify;
+}
+input:focus,
+.form-control:focus{
+    outline: 0;
+    box-shadow: none;
+}
+h2{
+    padding: 10px 0;
+    color: #11161e;
+    text-align: center;
+    font-family: var(--primary-font);
+    font-size: 36px;
+    font-weight: 700;
+    line-height: 46px; /* 127.778% */
+}
+h6{
+    color: var(--dark-color);
+    font-family: var(--primary-font);
+    font-size: 18px;
+    font-weight: 600;
+    line-height: 28px; /* 155.556% */
+    margin-left: 5px;
+}
+/* =========== Common Css End =========== */
+
+/* =========== Top Bar Section Css Start =========== */
+#top_bar {
+    background-color: var(--dark-hover-color);
+    color: var(--light-color);
+    padding: 11px 0;
+}
+#top_bar .top_bar_left p i{
+    color: var(--primary-color-light);
+    margin-right: 4px;
+}
+#top_bar .top_bar_left p{
+    line-height: 26px;
+}
+#top_bar .top_bar_left p span{
+    color: var(--primary-color-light);
+    font-family: var(--primary-font);
+}
+#top_bar .top_bar_right ul:first-child li{
+    border-right: 2px solid var(--border-color);
+    padding: 0 20px;
+}
+#top_bar a{
+    color : var(--light-color);
+    padding: 0 10px;
+}
+#top_bar a:hover{
+    color: var(--primary-color-light);
+}
+#top_bar ul li .drop-down{
+    background-color: var(--dark-hover-color);
+    color: var(--light-color);
+    border: none;
+}
+/* =========== Top Bar Section Css End =========== */
+
+/* =========== Nav Bar Section Css Start =========== */
+#primary_nav ul li a{
+    margin: 0 10px;
+    color: var(--dark-hover-color);
+}
+#primary_nav ul li a:hover{
+    color: var(--primary-color-light);
+}
+#primary_menu .icons .icon{
+    margin: 0 10px;
+}
+#primary_menu .icons a{
+    color: var(--dark-hover-color);
+}
+#primary_menu .icons a:hover{
+    color: var(--primary-color-light);
+}
+#primary_menu ul li button{
+    border: none;
+    background: none;
+    color: var(--dark-hover-color);
+}
+#primary_menu ul li button:hover{
+    color: var(--primary-color-light);
+}
+
+/* =========== Search Section Css Start =========== */
+#search{
+    position: fixed;
+    inset: 0;
+    background-color: #010507;
+    transform: scale(0);
+    transition: .5s;
+}
+#search.show{
+    transform: scale(1)
+}
+#search .search_form{
+    width: 40%;
+    height: 60px;
+    border: 2px solid var(--primary-color-light);
+    border-radius: 50px;
+    padding: 15px 20px;
+}
+#search .search_form input{
+    width: 100%;
+    background:none;
+    border: none;
+    color: var(--light-color);
+}
+#search .search_form button{
+    background:none;
+    border: none;
+    color: var(--light-color)
+}
+#search #search_close_btn{
+    position: absolute;
+    right: 30px;
+    top: 30px;
+    cursor: pointer;
+    transition: .5s;
+    color: var(--primary-color-light);
+    background: var(--dark-color);
+    border: 1px solid var(--primary-color-light);
+    font-size: 20px;
+    height: 60px;
+    width: 60px;
+    border-radius: 50%;
+}
+#search #search_close_btn:hover{
+    background: var(--light-color);
+    transform: rotate(90deg);
+    border: none;
+}
+/* =========== Search Section Css End =========== */
+
+/* =========== Cart Section Css Start=========== */
+/* =========== Cart Section Css End =========== */
+
+/* =========== Nav Bar Section Css End =========== */
+
+/* =========== Hero area Css Start =========== */
+#hero .hero_slider_item {
+    height: 800px;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    z-index: 1;
+    color: var(--light-color);
+}
+#hero .hero_slider_item::after {
+    content: "";
+    position: absolute;
+    width: 50%;
+    height: 100%;
+    background: linear-gradient(
+        90deg,
+        rgba(2, 5, 19, 0.7) 0%,
+        rgba(2, 4, 17, 0.62) 21.81%,
+        rgba(1, 4, 15, 0.55) 37.92%,
+        rgba(1, 3, 13, 0.48) 50.29%,
+        rgba(0, 0, 0, 0) 100%
+    );
+    z-index: -1;
+}
+#hero .hero_slider .hero_slider_dots {
+    display: flex;
+    flex-wrap: wrap;
+    position: absolute;
+    left: 200px;
+    bottom: 200px;
+}
+#hero .hero_slider .hero_slider_dots li {
+    margin-right: 5px;
+    line-height: 0;
+}
+#hero .hero_slider .hero_slider_dots li button {
+    font-size: 0;
+    border: none;
+    width: 10px;
+    height: 6px;
+    border-radius: 5px;
+    background: var(--light-color);
+    transition: 0.5s;
+}
+#hero .hero_slider .hero_slider_dots li.slick-active button {
+    width: 26px;
+    background: var(--primary-color-light);
+}
+#hero h1{
+    color: var(--light-color);
+    font-family: var(--primary-font);
+    font-size: 64px;
+    font-weight: 700;
+    line-height: 74px; /* 115.625% */
+}
+#hero p{
+    color: var(--light-color);
+    font-family: var(--secondary-font);
+    line-height: 28px; /* 175% */
+    margin-bottom: 25px;
+}
+#hero a{
+    padding: 16px 30px;
+    color: var(--light-color);
+    background-color: var(--primary-color-light);
+}
+#hero a:hover{
+    transition: 0.5s;
+    background-color: var(--light-color);
+    color: var(--primary-color-light);
+}
+#hero .hero_slider img{
+    width: 100%;
+}
+/* =========== Hero area Css End =========== */
+
+/* =========== Featured Items Css Start =========== */
+#featured_items{
+    padding: 100px 0;
+}
+#featured_items h2{
+    color: var(--light-color);
+    text-align: center;
+    font-family: var(--primary-font);
+    font-size: 30px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 40px; /* 133.333% */
+}
+#featured_items h2:hover{
+    color: var(--primary-color-light);
+    transition: 0.5s;
+}
+#featured_items a{
+    color: var(--light-color); 
+    /* Button Text */
+    font-family: var(--primary-font);
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 28px; /* 175% */
+}
+#featured_items i{
+    margin-left: 10px;
+}
+#featured_items a:hover{
+    color: var(--primary-color-light);
+    transition: 0.3s;
+}
+#featured_items a::after{
+    content: '';
+    position: absolute;
+    width: 0%;
+    height: 1px;
+    bottom: 0;
+    right: 0;
+    background: #353535;
+    transition: .4s;
+}
+#featured_items a:hover::after{
+    width: 100%;
+    left: 0;
+}
+#featured_items .featured_item:hover {
+    position: relative;
+}
+#featured_items .featured_item .overlay {
+    transform: scale(0);
+    transition: 0.5s;
+    position: absolute;
+    inset: 20px;
+    background-color: rgba(17, 22, 30, 0.5);
+    transform-origin: bottom;
+}
+#featured_items .featured_item:hover .overlay{
+    transform: scale(1);
+}
+/* =========== Featured Item Css End =========== */
+
+/* =========== New Arrival area Css Start =========== */
+#new_product{
+    margin-bottom: 100px;
+}
+.product_box {
+    border: 1px solid var(--bg-color-light);
+    position: relative;
+    overflow: hidden;
+}
+.product_box a{
+    color: var(--dark-color);
+    font-family: var(--primary-font);
+    font-size: 18px;
+    font-weight: 600;
+    line-height: 28px; /* 155.556% */
+        -left: 5px;
+    transition: 0.5s;
+}
+.product_box a:hover{
+    color: var(--primary-color-light);
+}
+.product_box .product_img {
+    position: relative;
+    overflow: hidden;
+}
+.product_box .product_img .product_img_hover {
+    position: absolute;
+    inset: 0;
+    object-fit: cover;
+    object-position: left;
+    z-index: 5;
+    opacity: 0;
+    visibility: hidden;
+    transition: 0.5s;
+}
+.product_box:hover .product_img .product_img_hover {
+    opacity: 1;
+    visibility: visible;
+    transform: scale(1.1);
+}
+.product_box .product_info {
+    padding: 24px;
+}
+.product_box .product_action_btn {
+    position: absolute;
+    z-index: 10;
+    top: 44px;
+    right: -50px;
+    transition: 0.5s;
+}
+.product_box:hover .product_action_btn {
+    right: 17px;
+}
+.product_box .product_action_btn ul li button {
+    border: none;
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    background-color: var(--light-color);
+    margin-bottom: 10px;
+    color: var(--dark-hover-color);
+    box-shadow: var(--shadow-22);
+    transition: 0.5s;
+}
+.product_box .product_action_btn ul li button:hover {
+    background-color: var(--primary-color-light);
+    color: var(--light-color);
+    box-shadow: none;
+}
+.product-tooltip {
+    --bs-tooltip-bg: var(--dark-hover-color);
+    --bs-tooltip-color: var(--light-color);
+}
+#new_product .new_product_slider .new_product_slider_item {
+    margin: 0 12px;
+}
+.product_badge{
+    position: absolute;
+    rotate: -90deg;
+    top: 10px;
+    left: 20px;
+    padding: 5px 10px;
+    color: var(--light-color);
+    border-radius: 13px 0px 0px 13px;
+    background-color: var(--primary-color-light);
+}
+.product_rating{
+    color: var(--primary-color-light);
+}
+
+/* =========== New Arrival area Css End =========== */
+
+#bg{
+    height: 600px;
+    background-image: url(../img/bg.jpg);
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+#bg h3{
+    color: var(--light-color);
+    font-family: var(--primary-font);
+    font-size: 36px;
+    font-weight: 700;
+    line-height: 46px; /* 127.778% */
+}
+#bg p{
+    color: var(--light-color);
+    font-family: var(--secondary-font);
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 28px; /* 175% */
+    margin-bottom: 30px;
+}
+#bg a{
+    padding: 16px 30px;
+    color: var(--light-color);
+    border: 1px solid #FFF;
+}
+#bg a:hover{
+    border: none;
+    transition: 0.5s;
+    background-color: var(--primary-color-light);
+}
+/* =========== Best Selling Section Css Start =========== */
+#best_products{
+    padding: 80px 0;
+}
+#best_products .new_product_slider_item{
+   margin-bottom: 30px;
+}
+#best_products .animate_btn{
+    width: 200px;
+    margin: auto;
+    padding: 16px 30px;
+    color: var(--light-color);
+    background-color: var(--primary-color-light);
+}
+#best_products .animate_btn i{
+    padding-left: 5px;
+}
+/* =========== Best Selling Section Css Start =========== */
+
+/* =========== Deals area Css Start =========== */
+#deal{
+    padding: 100px 0;
+}
+#deals_timer{
+    margin-bottom: 50px;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 40px;
+    width: 500px;
+    height: 70px;
+    margin-left: -50px;
+}
+#deals_timer h4{
+    color: var(--text-color);
+    font-family: var(--primary-font);
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 34px; /* 141.667% */
+}
+#deals_timer p{
+    color: var(--paragraph-color);
+    text-align: center;
+    font-family: var(--primary-font);
+    font-weight: 400;
+    line-height: 26px; /* 162.5% */
+}
+#deals_timer span{
+    font-size: 70px;
+    color: var(--primary-color-light);
+}
+#deals_slider{
+    height: 800px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+#deal_slider p{
+    font-family: var(--secondary-font);
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 28px; /* 175% */
+    margin-bottom: 30px;
+}
+.deals_slider{
+    position: relative;
+}
+#deal .deals_slider .img-title{
+    position: absolute;
+    top: 80px;
+    left: 60px;
+}
+#deal .deals_slider h6{
+    color: var(--text-color);
+    font-family: var(--primary-font);
+    font-size: 18px;
+    font-weight: 600;
+    line-height: 28px; /* 155.556% */
+}
+#deal .deals_slider p{
+    color: var(--paragraph-color);
+    font-family: var(--secondary-font);
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 28px; /* 175% */
+}
+#deal .deals_slider h5{
+    color: var(--Text-Color, #11161E);
+    font-family: var(--primary-font);
+    font-size: 20px;
+    font-weight: 600;
+    line-height: 30px; /* 150% */
+    margin-bottom: 30px;
+}
+#deal .deals_slider a{
+    padding: 16px 30px;
+    color: var(--dark-color);
+    border: 1px solid #000;
+}
+#deal .deals_slider a:hover{
+    border: none;
+    transition: 0.5s;
+    color: var(--light-color);
+    background-color: var(--dark-hover-color);
+}
+/* #deals{
+    width: 1320px;
+    background: var(--light-color);
+    box-shadow: 0px 0px 70px 0px rgba(21, 26, 50, 0.08);
+} */
+/* =========== Deals area Css End =========== */
+/* =========== Explore area Css Start =========== */
+#explore{
+    background-image: url(../img/explore-BG.jpg);
+    overflow: hidden;
+}
+#explore .explore_info h2{
+    text-align: left;
+}
+#explore .explore_info{
+    align-items: center;
+    margin: auto;
+}
+#explore p{
+    color: var(--Paragraph-Color, #444);
+    font-family: var(--secondary-font);
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 28px; /* 175% */
+    margin-bottom: 30px;
+}
+#explore a{
+    padding: 16px 30px;
+    color: #000;
+    border: 1px solid #000;
+}
+#explore a:hover{
+    border: none;
+    transition: 0.5s;
+    color: var(--light-color);
+    background-color: var(--primary-color-light);
+}
+#explore .explore_content{
+    position: relative;
+}
+#explore .play_btn{
+    top: 45%;
+    left: 60%;
+    width: 60px;
+    height: 60px;
+    border: none;
+    border-radius: 50%;
+    position: absolute;
+    color: var(--primary-color-dark);
+    background-color: var(--light-color);
+}
+#explore .play_btn:hover{
+    border: none;
+    color: var(--light-color);
+    background-color: var(--primary-color-dark);
+}
+/* =========== Explore area Css End =========== */
+/* =========== News area Css Start =========== */
+#news{
+    padding: 60px 0;
+    margin-bottom: 80px;
+}
+#news h5{
+    color: var(--Text-Color, #11161E);
+
+    /* Heading - H5 */
+    font-family: var(--primary-color-light);
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 30px; /* 150% */
+}
+#news h5:hover{
+    color: var(--primary-color-light);
+}
+#news p{
+    color: var(--Paragraph-Color, #444);
+
+    /* Paragraph/body text */
+    font-family: var(--secondary-font);
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 28px; /* 175% */
+}
+#news a{
+    color: var(--Paragraph-Color, #444);
+
+    /* Button Text */
+    font-family: var(--primary-font);
+    font-weight: 600;
+    line-height: 28px; /* 175% */
+}
+#news a:hover{
+    color: var(--primary-color-light)
+}
+
+/* =========== News area Css End =========== */
+/* =========== Footer Over Section Css Start =========== */
+#footer_over{
+    position: relative;
+}
+#footer_over .container{
+    background: var(--Comon-Colot, #FFF);
+    padding: 30px 25px;
+    /* 32 */
+    box-shadow: 0px 0px 50px 0px rgba(21, 26, 50, 0.10);
+    margin-top: -65px;
+    margin-left: 190px;
+    position: absolute;
+}
+.footer_over_text{
+    margin: auto 0;
+}
+
+/* =========== Footer Over Section Css End =========== */
+/* =========== Footer Bar Section Css Start =========== */
+.footer{
+    padding: 97px 0;
+    color : var(--light-color);
+    background-color: var(--dark-hover-color);
+}
+.footer .row{
+    border-bottom: 1px solid var(--light-color);
+    padding: 50px 0;
+}
+.footer .sec-1 ul li a{
+    border: 1px solid var(--dark-hover-color);
+    padding: 13px 15px;
+    background-color: var(--light-color);
+    color: var(--dark-hover-color);
+}
+.footer .sec-1 ul li a:hover{
+    color: var(--light-color);
+    background-color: var(--primary-color-light);
+}
+.footer h4{
+    padding-bottom: 20px;
+    color: var(--Comon-Colot, #FFF);
+    font-family: var(--primary-font);
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 34px; /* 141.667% */
+}
+.footer .sec-3 ul{
+    display: flex;
+    flex-direction: column;
+}
+.footer .sec-3 ul li i{
+    color: var(--primary-color-light);
+    border: none;
+    gap: 10px;
+}
+.footer .sec-3 ul li a{
+    color: var(--light-color);
+}
+.footer ul li{
+    color: var(--light-color);
+    font-family: var(--secondary-font);
+    font-weight: 400;
+    line-height: 28px; /* 175% */
+}
+.footer .sec-2 ul li a{
+    color: var(--light-color);
+}
+.footer .sec-2 ul li a:hover{
+    color: var(--primary-color-light);
+}
+.footer .sec-2 ul li i:hover{
+    color: var(--primary-color-light);
+}
+/* Footer section end */
+
+footer{
+    padding: 20px 0;
+    height: 70px;
+    margin-top: -2px;
+    color: var(--light-color);
+    background-color: var(--paragraph-color);
+}
+/* =========== Footer Bar Section Css End =========== */
